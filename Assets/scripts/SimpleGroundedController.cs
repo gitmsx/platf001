@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class SimpleGroundedController : MonoBehaviour
 {
-    public float JumpImpulse = 7f;
-    public float SideSpeed = 2f;
+    public float JumpImpulse = 20f;
+    public float SideSpeed = 10f;
 
     public ContactFilter2D ContactFilter;
 

@@ -70,10 +70,9 @@ public class SimpleGroundedController : MonoBehaviour
         m_SideSpeed = ( LeftArrow  ? -SideSpeed : 0f) + (RightArrow ? SideSpeed : 0f);
 
 
-        if (LeftArrow || RightArrow) State = States.Run;
-        else if (IsGrounded) State = States.Idle;
-        else State = States.Jump;
-
+        if (IsGrounded) State = States.Idle;
+        if ((LeftArrow || RightArrow ) && IsGrounded) State = States.Run;
+        if (!IsGrounded) State = States.Jump;
 
         if (LeftArrow && (FaceRight == true))
                 {
